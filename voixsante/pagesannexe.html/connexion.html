@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOIXsante - Connexion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#3498db',
+                        'secondary': '#2c3e50',
+                        'light-blue': '#a2daff',
+                        'dark-blue': '#0a2540',
+                        'light-bg': '#f5f9fc',
+                        'input-bg': '#f3f9ff',
+                    },
+                    boxShadow: {
+                        'custom': '0 8px 24px rgba(0, 32, 63, .45), 0 8px 8px rgba(0, 32, 63, .45)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        /* Animations qui ne peuvent pas être facilement faites avec Tailwind */
+        @keyframes show {
+            0%, 49.99% {
+                opacity: 0;
+                z-index: 1;
+            }
+            50%, 100% {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+        
+        .panel-active .sign-up-container {
+            transform: translateX(100%);
+            opacity: 1;
+            z-index: 5;
+            animation: show 0.6s;
+        }
+        
+        .panel-active .overlay-container {
+            transform: translateX(-100%);
+        }
+        
+        .panel-active .overlay {
+            transform: translateX(50%);
+        }
+        
+        .panel-active .overlay-left {
+            transform: translateX(0);
+        }
+        
+        .panel-active .overlay-right {
+            transform: translateX(20%);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(13, 148, 136, 0.6);
+            transition: background-color 0.3s ease;
+            color: black;
+        }
+
+        .navbar .scrolled {
+            background-color: rgba(0, 0, 0, 1);
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="font-montserrat bg-light-bg m-0 p-0 overflow-y-auto">
+    
+    <header>
+        <!-- Barre de navigation - Fixe pendant le défilement -->
+        <nav class="fixed top-0 left-0 right-0 p-4 shadow-lg shadow-black z-10 flex justify-between w-full animate-slideUp transition-colors duration-300 navbar" id="navbar">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="/voixsantemodif/voixsante/images/logoVoixsante.jpg" alt="VOIXsanté Logo" class="h-10 w-10 rounded-full mr-2">
+                <span class="text-2xl font-bold text-white">VOIXsante</span>
+            </a>
+            
+            <!-- Navigation -->
+            <ul class="hidden lg:flex space-x-10 text-white">
+                <li><a href="1Accueil.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Accueil</a></li>
+                <li><a href="2apropos.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">A propos</a></li>
+                <li><a href="3contact.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Contacts</a></li>
+                <ul class="flex space-x-4">
+                    <li class="relative group">
+                        <a href="#" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">
+                            Comptes
+                        </a>
+                        <ul class="absolute hidden group-hover:block bg-white text-black shadow-lg rounded mt-2 w-48 z-10">
+                            <li>
+                                <a href="4compteuser.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
+                                    Compte d'utilisateur
+                                </a>
+                            </li>
+                            <li>
+                                <a href="500comptehopital.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
+                                    Compte des hôpitaux
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <li><a href="#" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Temoignage</a></li>
+                <li><a href="600faq.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">FAQ</a></li>
+                <li><a href="600faq.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Admin</a></li>
+                <li><a href="700connexion.html" class="hover:bg-blue-300 p-2 rounded border">Connexion</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section bannière -->
+        <div class="relative w-full h-80 lg:h-90 md:h-52 mt-16">
+            <!-- Image de fond -->
+            <img src="/images/voixsante/p3header.avif" alt="Image de fond VOIXsante" 
+                class="absolute inset-0 w-full h-full object-cover z-0">
+            
+            <!-- Overlay pour meilleure lisibilité -->
+            <div class="absolute inset-0 bg-teal-700 bg-opacity-60 z-5"></div>
+            
+            <!-- Texte centré -->
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="text-center">
+                    <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl text-white">Connexion</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+            
+    <main class="flex justify-center items-center flex-col px-20 py-12 min-h-[120vh]">
+        <!-- Formulaire de contact -->
+        <div id="container" class="relative overflow-hidden min-h-[650px] w-full max-w-[768px] bg-white rounded-lg shadow-custom mx-auto my-10">
+            <div class="sign-up-container absolute top-0 h-full w-1/2 left-0 opacity-0 z-1 transition-all duration-600 ease-in-out">
+                <form class="bg-white flex flex-col items-center justify-center p-12 h-full text-center overflow-y-auto">
+                    <h1 class="m-0 text-2xl text-secondary">Créer un compte</h1>
+                    
+                    <div class="user-type-selector flex mb-4 w-full">
+                        <button type="button" class="user-type active flex-1 mx-1 py-2 bg-input-bg text-secondary border border-light-blue rounded transition-all duration-300 ease-in-out" data-type="user">Patient</button>
+                        <button type="button" class="user-type flex-1 mx-1 py-2 bg-input-bg text-secondary border border-light-blue rounded transition-all duration-300 ease-in-out" data-type="hospital">Hôpital</button>
+                    </div>
+                    
+                    <div class="social-container my-5">
+                        <a href="https://www.facebook.com/share/1EGwjfXwkx/" class="inline-flex justify-center items-center m-1 h-10 w-10 rounded-full bg-input-bg border border-dark-blue border-opacity-25 transition-all duration-300 ease-in-out hover:bg-light-blue"><i class="fab fa-facebook-f"></i></a>
+                        
+                    </div>
+                    
+                    <span class="text-sm text-gray-500">ou inscrivez-vous avec votre email</span>
+                    
+                    <!-- Champs utilisateur -->
+                    <div id="user-fields" class="w-full">
+                        <input type="email" placeholder="Email" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="text" placeholder="Ticket de passage hopital" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="password" placeholder="Mot de passe" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="tel" placeholder="Téléphone" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                    </div>
+                    
+                    <!-- Champs hôpital -->
+                    <div id="hospital-fields" class="hidden w-full">
+                        <input type="text" placeholder="Nom de l'établissement" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="text" placeholder="Numéro d'identification" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="email" placeholder="Email professionnel" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="password" placeholder="Mot de passe" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                        <input type="tel" placeholder="Téléphone" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                    </div>
+                    
+                    <button class="bg-light-blue text-dark-blue border border-light-blue text-base font-bold py-3 px-8 mt-5 rounded-full transition-all duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-95">Créer le compte</button>
+                </form>
+            </div>
+
+            <div class="login-container absolute top-0 h-full w-1/2 left-0 z-2 transition-all duration-600 ease-in-out">
+                <form class="bg-white flex flex-col items-center justify-center p-12 h-full text-center overflow-y-auto">
+                    <h1 class="m-0 text-2xl text-secondary">Se connecter</h1>
+                    
+                    <div class="user-type-selector flex mb-4 w-full">
+                        <button type="button" class="login-type active flex-1 mx-1 py-2 bg-input-bg text-secondary border border-light-blue rounded transition-all duration-300 ease-in-out" data-type="user">Patient</button>
+                        <button type="button" class="login-type flex-1 mx-1 py-2 bg-input-bg text-secondary border border-light-blue rounded transition-all duration-300 ease-in-out" data-type="hospital">Hôpital</button>
+                    </div>
+                    
+                    <div class="social-container my-5">
+                        <a href="#" class="inline-flex justify-center items-center m-1 h-10 w-10 rounded-full bg-input-bg border border-dark-blue border-opacity-25 transition-all duration-300 ease-in-out hover:bg-light-blue"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="inline-flex justify-center items-center m-1 h-10 w-10 rounded-full bg-input-bg border border-dark-blue border-opacity-25 transition-all duration-300 ease-in-out hover:bg-light-blue"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="inline-flex justify-center items-center m-1 h-10 w-10 rounded-full bg-input-bg border border-dark-blue border-opacity-25 transition-all duration-300 ease-in-out hover:bg-light-blue"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    
+                    <span class="text-sm text-gray-500">ou utilisez votre compte</span>
+                    <input type="email" placeholder="Email" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                    <input type="password" placeholder="Mot de passe" class="bg-input-bg border border-[#deeeff] rounded py-3 px-4 my-2 w-full">
+                    <a href="#" class="text-sm text-primary no-underline my-2 hover:underline">Mot de passe oublié?</a>
+                    <button class="bg-light-blue text-dark-blue border border-light-blue text-base font-bold py-3 px-8 mt-5 rounded-full transition-all duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-95">Se connecter</button>
+                </form>
+            </div>
+
+            <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden z-100 transition-transform duration-600 ease-in-out">
+                <div class="overlay bg-gradient-to-r from-primary to-secondary text-white relative left-[-100%] h-full w-[200%] transform transition-transform duration-600 ease-in-out">
+                    <div class="overlay-panel overlay-left absolute flex items-center justify-center flex-col p-10 text-center top-0 h-full w-1/2 transform translate-x-[-20%] transition-transform duration-600 ease-in-out">
+                        <div class="logo text-2xl font-extrabold mb-5 text-white"><i class="fas fa-heartbeat mr-2"></i>VOIXsante</div>
+                        <h1 class="text-2xl font-bold">Ravi de vous revoir!</h1>
+                        <p class="text-sm font-normal leading-5 tracking-wide my-5">Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                        <button id="login" class="ghost bg-transparent border-2 border-white text-white text-base font-bold py-3 px-8 mt-5 rounded-full transition-all duration-300 ease-in-out hover:bg-white hover:text-primary active:scale-95">Se connecter</button>
+                    </div>
+                    <div class="overlay-panel overlay-right absolute right-0 flex items-center justify-center flex-col p-10 text-center top-0 h-full w-1/2 transform transition-transform duration-600 ease-in-out">
+                        <div class="logo text-2xl font-extrabold mb-5 text-white"><i class="fas fa-heartbeat mr-2"></i>VOIXsante</div>
+                        <h1 class="text-2xl font-bold">Bienvenue sur notre plateforme</h1>
+                        <p class="text-sm font-normal leading-5 tracking-wide my-5">
+                            Entrez vos informations personnelles et commencez votre voyage avec nous pour une meilleure gestion de votre santé et de vos rendez-vous médicaux
+                        </p>
+                        <button id="signUp" class="ghost bg-transparent border-2 border-white text-white text-base font-bold py-3 px-8 mt-5 rounded-full transition-all duration-300 ease-in-out hover:bg-white hover:text-primary active:scale-95">Créer un compte</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slogan final -->
+        <div class="mt-5 text-center w-full">
+            <p class="italic text-xl text-teal-700">"Témoignez aujourd'hui, soignez demain !"</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-[#0F2C3F] text-white py-10 relative">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-30" 
+        style="background-image: url('/images/voixsante/im3-1.jpg')"></div>
+        <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8">
+        <!-- Logo et description -->
+        <div>
+            <h2 class="text-2xl font-bold">VOIX SANTÉ</h2>
+            <p class="mt-3 text-gray-300">
+            Plateforme de témoignages et d'amélioration du système de santé à Abidjan.
+            </p>
+        </div>
+    
+        <!-- Contact -->
+        <div>
+            <h3 class="text-lg font-semibold">CONTACT</h3>
+            <ul class="mt-3 space-y-2 text-gray-300">
+            <li>📍 Abidjan, Côte d'Ivoire</li>
+            <li>📧 contact@voixsante.ci</li>
+            <li>📞 +225 05 55 73 77 62</li>
+            </ul>
+        </div>
+    
+        <!-- Liens rapides -->
+        <div>
+            <h3 class="text-lg font-semibold">LIENS UTILES</h3>
+            <ul class="mt-3 space-y-2 text-gray-300">
+            <li><a href="#" class="hover:text-gray-400">Accueil</a></li>
+            <li><a href="http://127.0.0.1:5502/2apropos.html" class="hover:text-gray-400">À propos</a></li>
+            <li><a href="http://127.0.0.1:5502/3contact.html" class="hover:text-gray-400">Contact</a></li>
+            <li><a href="http://127.0.0.1:5502/4compteuser.html" class="hover:text-gray-400">Compte Utilisateur</a></li>
+            <li><a href="http://127.0.0.1:5502/500comptehopital.html" class="hover:text-gray-400">Compte Hôpital</a></li>
+            <li><a href="#" class="hover:text-gray-400">FAQ</a></li>
+            <li><a href="http://127.0.0.1:5502/700connexion.html" class="hover:text-gray-400">Connexion</a></li>
+            </ul>
+        </div>
+    
+        <!-- Newsletter -->
+        <div>
+            <h3 class="text-lg font-semibold">NEWSLETTER</h3>
+            <form class="mt-3 flex">
+            <input type="email" placeholder="Votre email" class="p-2 rounded-l bg-white text-black outline-none flex-1">
+            <button class="bg-green-500 px-4 py-2 rounded-r hover:bg-green-600">📩</button>
+            </form>
+            <!-- Réseaux sociaux -->
+            <div class="mt-4 flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-white">🌍</a>
+            <a href="#" class="text-gray-300 hover:text-white">📘</a>
+            <a href="#" class="text-gray-300 hover:text-white">🐦</a>
+            <a href="#" class="text-gray-300 hover:text-white">📸</a>
+            </div>
+        </div>
+        </div>
+<br><br>
+        <div class="text-center text-white text-sm mt-6 pb-1 pt-2"
+        >
+        <div class="container mx-auto px-4 text-center">
+          <p>© 2025 VOIXsante. Tous droits réservés.</p>
+          <p class="mt-2 text-sm">Recueillir et analyser les retours de 1000 patients pour améliorer le service hospitalier à Abidjan</p>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('container');
+            const loginButton = document.getElementById('login');
+            const signUpButton = document.getElementById('signUp');
+            const userTypeButtons = document.querySelectorAll('.user-type');
+            const loginTypeButtons = document.querySelectorAll('.login-type');
+            const userFields = document.getElementById('user-fields');
+            const hospitalFields = document.getElementById('hospital-fields');
+
+            // Mode par défaut: panneau actif
+            container.classList.add('panel-active');
+
+            if (signUpButton) {
+                signUpButton.addEventListener('click', () => {
+                    container.classList.add('panel-active');
+                });
+            }
+
+            if (loginButton) {
+                loginButton.addEventListener('click', () => {
+                    container.classList.remove('panel-active');
+                });
+            }
+
+            // Gestion du type d'utilisateur pour l'inscription
+            userTypeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Supprimer la classe active de tous les boutons
+                    userTypeButtons.forEach(btn => btn.classList.remove('active'));
+                    // Ajouter la classe active au bouton cliqué
+                    button.classList.add('active');
+
+                    // Afficher les champs appropriés
+                    if (button.dataset.type === 'user') {
+                        userFields.classList.remove('hidden');
+                        hospitalFields.classList.add('hidden');
+                    } else {
+                        userFields.classList.add('hidden');
+                        hospitalFields.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Gestion du type d'utilisateur pour la connexion
+            loginTypeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Supprimer la classe active de tous les boutons
+                    loginTypeButtons.forEach(btn => btn.classList.remove('active'));
+                    // Ajouter la classe active au bouton cliqué
+                    button.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

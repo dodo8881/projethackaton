@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saisie Vocale</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <!--navbar-->
+        <div class="bg-cyan-50 text-black text-center text-xs py-1">
+            Témoignez aujourd'hui, soignez demain !
+        </div>
+        <nav id="navbar" class="flex items-center justify-between bg-blue-100 p-4 px-6">
+            <div class="flex items-center relative group">
+              <a href="#" class="flex items-center mr-4">
+                <img src="/voixsantemodif/voixsante/images/logoVoixsante.jpg" alt="VOIXsante Logo" class="h-12 w-12 rounded-full mr-2">
+                <p class="font-mono font-extrabold rounded-full">VOIX</p>
+                <p class="font-mono">sante</p>
+            </a>
+                
+                <!-- Menu à côté du logo -->
+                <div id="nav-toggle" class="flex gap-1 p-2 px-2 border border-none rounded-lg cursor-pointer select-none text-black">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                                ></path>
+                    </svg>
+                    Menu
+                </div>
+                
+                <!-- Menu déroulant au survol -->
+                <div id="group" class="absolute left-0 top-full hidden group-hover:flex bg-blue-200 p-4 flex-col gap-5 text-l font-semibold z-10 w-54">
+                  <ul class="flex flex-col gap-2 justify-center">
+                      <li class="p-2 text-center"><a href="http://127.0.0.1:5502/1Accueil.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Accueil</a></li>
+                      <li class="p-2 text-center"><a href="http://127.0.0.1:5502/2apropos.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">A propos</a></li>
+                      <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Contact</a></li>
+                      <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Temoignage</a></li>
+                      <li class="p-2 text-center"><a href="http://127.0.0.1:5502/600faq.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">FAQ</a></li>
+                      
+                  </ul>
+                  
+                  <button class="p-2 text-center">
+                      <a href="http://127.0.0.1:5502/700connexion.html" class="bg-blue-200 transition-colors delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white font-bold py-2 px-4 rounded">Connexion</a>
+                  </button>
+              </div>
+            </div>
+            
+            <!-- Divs en dehors du menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-user text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="http://127.0.0.1:5502/4compteuser.html" class="hover:underline">Bonjour, User</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-question text-cyan-500 text-md rounded-full border-1 py-1 px-2"></i>
+                    <a href="#" class="hover:underline">Aide</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-envelope text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="#" class="hover:underline">Message</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main><!--2 blocs-->
+        
+        <div class="flex  space-x-10 mt-10"><!--Ils prend tout-->
+          
+          <div class="w-80 shadow-xl ml-30 pl-5 pt-5 pb-5 space-x-2 gap-5 rounded-3xl"><!--Bloc1-->
+
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-door-open text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/4compteuser.html" class="">Bienvenue</a>
+            </div><br>
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-user text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/41votrecompte.html" class="">Votre compte VOIXsante</a>
+            </div><br>
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-user-plus text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/42v%C3%A9cus.html" class="">Vos Vécus</a>
+            </div><br>
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-bullhorn text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/43suggestions.htm" class="">Vos suggestions</a>
+            </div><br>
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-inbox text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/44boite.html" class="">Boîte de réception</a>
+            </div><br>
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-share text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/45suivisret.html" class="">Suivis/ Retour</a>
+            </div><br>
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-magnifying-glass text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/46recherche.html" class="">Rechercher</a>
+            </div><br>
+            <div class="flex space-x-2 items-center bg-cyan-200 px-2 py-2 rounded-xl">
+                <i class="fa-solid fa-microphone text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/47vocale.html" class="">Saisie Vocale</a>
+            </div>
+
+            <br>
+
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-plus text-cyan-500 text-md"></i>
+                <a href="http://127.0.0.1:5502/48nouveaux.html" class="">Ajouter Nouveaux</a>
+            </div>
+
+            <br><br>
+
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-user-plus text-cyan-500 text-md"></i>
+                <a href="#" class="">Inviter des personnes</a>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                <i class="fa-solid fa-minus text-cyan-500 text-md"></i>
+                <a href="#" class="">Déconnexion</a>
+            </div>
+        </div>
+
+            <div class="w-220 h-cover shadow-xl p-10 rounded-3xl"><!--Bloc2-->
+
+                <div>
+                    <h1 class="font-Anton font-semibold text-3xl hover:animate-bounce">Saisie vocale</h1>
+                    <hr>
+
+                    <br><br>
+
+                    <div class="grid grid-cols-2 gap-20"><!--grille de 2 colonnes et lignes-->
+
+                        <div class="shadow-2xl animate-slideUp transition-transform duration-500 hover:scale-105 p-6 rounded-2xl">
+                            <h2 class="font-Anton font-medium text-xl mb-4 hover:animate-bounce">Saisie vocale</h2>
+                            <hr class="mb-4">
+                            
+                            <!-- Sélection de la langue -->
+                            <div class="mb-6">
+                              <label for="language-select" class="block text-gray-700 font-medium mb-2">Langue ivoirienne:</label>
+                              <select id="language-select" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                                <option value="baoule">Baoulé</option>
+                                <option value="dioula">Dioula</option>
+                                <option value="bete">Bété</option>
+                                <option value="senoufo">Sénoufo</option>
+                                <option value="agni">Agni</option>
+                                <option value="attie">Attié</option>
+                                <option value="yacouba">Yacouba</option>
+                              </select>
+                            </div>
+                            
+                            <!-- Interface de saisie vocale -->
+                            <div class="mb-6">
+                              <div class="flex items-center justify-between mb-4">
+                                <p class="text-gray-700 font-medium">Enregistrer votre voix</p>
+                                <div class="flex items-center">
+                                  <span id="status-indicator" class="inline-block w-3 h-3 rounded-full bg-gray-400 mr-2"></span>
+                                  <span id="status-text" class="text-sm text-gray-600">Prêt</span>
+                                </div>
+                              </div>
+                              
+                              <div class="flex space-x-4 mb-4">
+                                <button id="start-recording" class="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-lg flex items-center justify-center">
+                                  <i class="fa-solid fa-microphone mr-2"></i>
+                                  Commencer
+                                </button>
+                                <button id="stop-recording" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 py-3 rounded-lg flex items-center justify-center" disabled>
+                                  <i class="fa-solid fa-stop mr-2"></i>
+                                  Arrêter
+                                </button>
+                              </div>
+                              
+                              <div class="relative">
+                                <div id="audio-visualization" class="h-16 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+                                  <div id="wave-container" class="flex items-center justify-center h-full w-full">
+                                    <!-- Les ondes audio seront générées ici -->
+                                  </div>
+                                  <p id="audio-placeholder" class="text-gray-400 absolute">Parlez après avoir appuyé sur "Commencer"</p>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <!-- Résultat de la transcription -->
+                            <div class="mb-6">
+                              <label for="transcription-result" class="block text-gray-700 font-medium mb-2">Transcription:</label>
+                              <textarea id="transcription-result" class="w-full h-32 bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500" placeholder="La transcription apparaîtra ici..." readonly></textarea>
+                            </div>
+                            
+                            <!-- Actions -->
+                            <div class="flex justify-between">
+                              <button id="clear-btn" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg">
+                                <i class="fa-solid fa-trash-can mr-1"></i>
+                                Effacer
+                              </button>
+                              <button id="save-btn" class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg">
+                                <i class="fa-solid fa-save mr-1"></i>
+                                Enregistrer
+                              </button>
+                            </div>
+                        </div>
+
+                        <div class="shadow-2xl animate-slideUp transition-transform duration-500 hover:scale-105 p-2 rounded-2xl h-70">
+                            <h2 class="font-Anton font-medium text-lg hover:animate-bounce">Paramètres</h2> <br><br><br>
+                            <p class="text-md">
+                                - Ajuster la sensibilité du microphone <br> <br>
+                                - Changer la langue de reconnaissance vocale <br> <br>
+                                - Personnaliser les commandes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <br><br><br>
+
+    <script>
+        // Sélection des éléments DOM
+        const startButton = document.getElementById('start-recording');
+        const stopButton = document.getElementById('stop-recording');
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+        const transcriptionResult = document.getElementById('transcription-result');
+        const clearButton = document.getElementById('clear-btn');
+        const saveButton = document.getElementById('save-btn');
+        const languageSelect = document.getElementById('language-select');
+        const audioPlaceholder = document.getElementById('audio-placeholder');
+        const waveContainer = document.getElementById('wave-container');
+        
+        // Variables pour la capture audio
+        let mediaRecorder;
+        let audioChunks = [];
+        let isRecording = false;
+        
+        // Fonction pour générer les ondes audio visuelles (simulation)
+        function generateWaveform() {
+          waveContainer.innerHTML = '';
+          audioPlaceholder.style.display = 'none';
+          
+          const numberOfBars = 30;
+          for (let i = 0; i < numberOfBars; i++) {
+            const bar = document.createElement('div');
+            const height = Math.floor(Math.random() * 50) + 10;
+            bar.style.width = '3px';
+            bar.style.height = `${height}%`;
+            bar.style.backgroundColor = '#0891b2'; // Cyan-600
+            bar.style.margin = '0 1px';
+            bar.style.borderRadius = '1px';
+            bar.style.transition = 'height 0.1s ease';
+            waveContainer.appendChild(bar);
+          }
+        }
+        
+        // Fonction pour animer les ondes audio
+        function animateWaveform() {
+          if (isRecording) {
+            const bars = waveContainer.children;
+            for (let i = 0; i < bars.length; i++) {
+              const height = Math.floor(Math.random() * 50) + 10;
+              bars[i].style.height = `${height}%`;
+            }
+            setTimeout(animateWaveform, 100);
+          }
+        }
+        
+        // Fonction pour démarrer l'enregistrement
+        startButton.addEventListener('click', () => {
+          if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Demander l'autorisation d'accéder au microphone
+            navigator.mediaDevices.getUserMedia({ audio: true })
+              .then(stream => {
+                audioChunks = [];
+                mediaRecorder = new MediaRecorder(stream);
+                
+                mediaRecorder.ondataavailable = (event) => {
+                  audioChunks.push(event.data);
+                };
+                
+                mediaRecorder.onstop = () => {
+                  // Simulation d'une transcription pour les langues ivoiriennes
+                  const selectedLanguage = languageSelect.value;
+                  let transcription = '';
+                  
+                  switch (selectedLanguage) {
+                    case 'baoule':
+                      transcription = "Akwaba nan Baoulé. Mi sran nga amanle sou miann.";
+                      break;
+                    case 'dioula':
+                      transcription = "Aní sogoma. N'bɛ kɛnɛ. I dantɔgɔ?";
+                      break;
+                    case 'bete':
+                      transcription = "Ɛ káká nɔ wɔ Bété gbɛ́ nɔ. Ɛ zí nɔ?";
+                      break;
+                    case 'senoufo':
+                      transcription = "Fɔ̀fɔ́lɔ́ tɔ̀gɔ́ ń kà. Ń kà ń yɛ̀rɛ́ ká wɛ́lɛ́.";
+                      break;
+                    case 'agni':
+                      transcription = "Akwaba wɔ Agni. Me di wɔ abɔdin.";
+                      break;
+                    case 'attie':
+                      transcription = "Mɔ wa djro Attié. Amlɛ tchi niɛ.";
+                      break;
+                    case 'yacouba':
+                      transcription = "Bhɛ́ɛ̀ ká Yacouba 'gɔ̀ɔ̀ ké. Í gɔ̀ɔ̀n?";
+                      break;
+                    default:
+                      transcription = "Transcription dans la langue sélectionnée...";
+                  }
+                  
+                  // Afficher la transcription avec un délai pour simuler le traitement
+                  setTimeout(() => {
+                    transcriptionResult.value = transcription;
+                    statusIndicator.classList.remove('bg-red-500');
+                    statusIndicator.classList.add('bg-green-500');
+                    statusText.textContent = 'Transcription terminée';
+                    audioPlaceholder.style.display = 'block';
+                    waveContainer.innerHTML = '';
+                  }, 1000);
+                };
+                
+                // Démarrer l'enregistrement
+                mediaRecorder.start();
+                isRecording = true;
+                
+                // Mettre à jour l'interface
+                startButton.disabled = true;
+                stopButton.disabled = false;
+                statusIndicator.classList.remove('bg-gray-400', 'bg-green-500');
+                statusIndicator.classList.add('bg-red-500');
+                statusText.textContent = 'Enregistrement en cours...';
+                
+                // Générer et animer les ondes
+                generateWaveform();
+                animateWaveform();
+                
+                startButton.classList.remove('bg-cyan-500', 'hover:bg-cyan-600');
+                startButton.classList.add('bg-gray-300', 'hover:bg-gray-300');
+                stopButton.classList.remove('bg-gray-300', 'hover:bg-gray-400');
+                stopButton.classList.add('bg-red-500', 'hover:bg-red-600');
+              })
+              .catch(error => {
+                console.error('Erreur lors de l\'accès au microphone:', error);
+                statusText.textContent = 'Erreur: Accès au microphone refusé';
+              });
+          } else {
+            statusText.textContent = 'Votre navigateur ne prend pas en charge l\'enregistrement audio';
+          }
+        });
+        
+        // Fonction pour arrêter l'enregistrement
+        stopButton.addEventListener('click', () => {
+          if (mediaRecorder && isRecording) {
+            mediaRecorder.stop();
+            isRecording = false;
+            
+            // Mettre à jour l'interface
+            startButton.disabled = false;
+            stopButton.disabled = true;
+            statusText.textContent = 'Traitement en cours...';
+            
+            startButton.classList.remove('bg-gray-300', 'hover:bg-gray-300');
+            startButton.classList.add('bg-cyan-500', 'hover:bg-cyan-600');
+            stopButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+            stopButton.classList.add('bg-gray-300', 'hover:bg-gray-400');
+            
+            // Arrêter les pistes audio
+            mediaRecorder.stream.getTracks().forEach(track => track.stop());
+          }
+        });
+        
+        // Fonction pour effacer la transcription
+        clearButton.addEventListener('click', () => {
+          transcriptionResult.value = '';
+          statusIndicator.classList.remove('bg-red-500', 'bg-green-500');
+          statusIndicator.classList.add('bg-gray-400');
+          statusText.textContent = 'Prêt';
+          audioPlaceholder.style.display = 'block';
+          waveContainer.innerHTML = '';
+        });
+        
+        // Fonction pour enregistrer la transcription (simulation)
+        saveButton.addEventListener('click', () => {
+          if (transcriptionResult.value.trim() !== '') {
+            statusText.textContent = 'Transcription enregistrée';
+            alert('Transcription enregistrée avec succès!');
+          } else {
+            alert('Veuillez d\'abord effectuer une transcription.');
+          }
+        });
+      </script>
+</body>
+</html>

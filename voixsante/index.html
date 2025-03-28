@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dist/styles.css">
+    <title>Accueil</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .header {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+        .bg-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .bg-carousel.active {
+            opacity: 1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 50%;
+        }
+        .header-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .header-content p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .header-content a {
+            background-color: #3b82f6;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+        }
+        .header-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 40%;
+        }
+        .header-images img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .header-images img:nth-child(2) {
+            margin-top: 20px;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+            color: black;
+        }
+
+        .navbar .scrolled {
+            background-color: rgba(0, 0, 0, 1);
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="fixed top-0 left-0 right-0 p-4 shadow-lg shadow-black z-10 flex justify-between w-full animate-slideUp transition-colors duration-300 navbar" id="navbar">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="/voixsantemodif/voixsante/images/logoVoixsante.jpg" alt="VOIXsanté Logo" class="h-10 w-10 rounded-full mr-2">
+                <span class="text-2xl font-bold text-white">VOIXsante</span>
+            </a>
+            
+            <!-- Navigation -->
+            <ul class="hidden lg:flex space-x-10 text-white">
+                <li><a href="index.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Accueil</a></li>
+                <li><a href="apropos.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">A propos</a></li>
+                <li><a href="contact.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Contacts</a></li>
+                <ul class="flex space-x-4">
+                    <li class="relative group">
+                        <a href="#" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">
+                            Comptes
+                        </a>
+                        <ul class="absolute hidden group-hover:block bg-white text-black shadow-lg rounded mt-2 w-48 z-10">
+                            <li>
+                                <a href="compteuser.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
+                                    Compte d'utilisateur
+                                </a>
+                            </li>
+                            <li>
+                                <a href="500comptehopital.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
+                                    Compte des hôpitaux
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <li><a href="#" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Temoignage</a></li>
+                <li><a href="600faq.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">FAQ</a></li>
+                <li><a href="600faq.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Admin</a></li>
+                <li><a href="700connexion.html" class="hover:bg-blue-300 p-2 rounded border">Connexion</a></li>
+            </ul>
+        </nav>
+
+        <div class="bg-carousel active" style="background-image: url('/voixsantemodif/voixsante/images/téléchargement.jpg'); filter: brightness(30%);"></div>
+        <div class="bg-carousel" style="background-image: url('/voixsantemodif/voixsante/images/téléchargement\ \(2\).jpg'); filter: brightness(30%);"></div>
+        <div class="bg-carousel" style="background-image: url('/voixsantemodif/voixsante/images/paysage-analogique-ville-batiments_23-2149661462.avif'); filter: brightness(30%);"></div>
+        <div class="bg-carousel" style="background-image: url('/voixsantemodif/voixsante/images/téléchargement\ \(3\).jpg'); filter: brightness(30%);"></div>
+        <div class="bg-carousel" style="background-image: url('/voixsantemodif/voixsante/images/téléchargement\ \(4\).jpg'); filter: brightness(30%);"></div>
+        
+        <div class="header-content animate-slideUp">
+            <h1>TEMOIGNEZ-AUJOURD'HUI<br> SOIGNEZ-DEMAIN</h1>
+            <p>Voix Santé, est une plateforme digitale qui donne<br>la parole aux patients pour améliorer les services<br>des hôpitaux publics d'Abidjan.</p>
+            <a href="http://127.0.0.1:5502/2apropos.html">Découvrir VOIXsanté <i class='bx bx-right-arrow-alt bx-tada' style='color:#fff'></i></a>
+        </div>
+        <div class="flex gap-10 w-1/2 justify-end animate-slideUp">
+            <img src="/danielle/Accueil/nouvel-employe-masculin-conversant-collegues-feminines-son-nouveau-travail-bureau_23-2149034618.avif"
+                class="rounded-full w-70 pt-20">
+            <img src="/danielle/Accueil/istockphoto-2174722385-612x612.jpg" class="rounded-full w-70 pb-20">
+        </div>
+    </header>
+
+    <main>
+
+        <br><br><br>
+        <!--Ordinateur et tablette-->
+        <h1 class="font-extrabold text-4xl text-center mt-2 text-blue-800">NOS OBJECTIFS</h1>
+
+        <section class="mt-2 p-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-10">
+
+                <!-- Carte 1 -->
+                <div class="shadow-lg shadow-black p-4 rounded-lg bg-white">
+                    <img src="/danielle/Accueil/istockphoto-897573162-612x612.jpg" class="w-full h-56 object-cover rounded-lg">
+                    <h2 class="text-xl font-bold text-blue-800 mt-4">ANALYSE ET RAPPORT</h2>
+                    <p class="text-gray-600 mt-2">Transformation des témoignages en données exploitables pour guider
+                        les décisions hospitalières et améliorer les services de santé.</p>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="shadow-lg shadow-black p-4 rounded-lg bg-white">
+                    <img src="/danielle/Accueil/scene-authentique-jeune-subissant-therapie-psychologique_23-2150161975.avif"
+                        class="w-full h-56 object-cover rounded-lg">
+                    <h2 class="text-xl font-bold text-blue-800 mt-4">COMMUNAUTÉ ENGAGÉE</h2>
+                    <p class="text-gray-600 mt-2">Voix Santé transforme l'expérience des patients en collectant et
+                        analysant leurs retours pour guider les décisions hospitalières, tout en bâtissant une
+                        communauté
+                        engagée.</p>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="shadow-lg shadow-black p-4 rounded-lg bg-white">
+                    <img src="/danielle/Accueil/vue-arriere-plan-abstraite-abstraite-interieur-regardant-vers-bureau-vide-portes-entree-mur-rideau-verre-cadre_1339-6363.avif"
+                        class="w-full h-56 object-cover rounded-lg">
+                    <h2 class="text-xl font-bold text-blue-800 mt-4">UNE PLATEFORME INNOVANTE</h2>
+                    <p class="text-gray-600 mt-2">Une solution qui recueille et analyse les témoignages des patients
+                        pour
+                        guider les décisions hospitalières et améliorer la qualité des soins.</p>
+                </div>
+            </div>
+
+
+
+        </section>
+        <br>
+        <br>
+
+        <section class="bg-blue-200 py-12 px-8">
+            <div class="text-center">
+                <h1 class="font-extrabold text-3xl text-blue-800">Une plateforme digitale pour votre bien-être</h1>
+                <h3 class="font-mono text-xl text-blue-600 mt-2">VOIX Santé, une solution à tous vos problèmes</h3>
+            </div>
+
+            <div class="mt-10 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Section "Qui nous sommes" -->
+                <div>
+                    <h4 class="font-bold text-2xl text-blue-700">Qui nous sommes</h4>
+                    <p class="mt-4 text-gray-700">
+                        VOIXsanté est une plateforme digitale complémentaire aux hôpitaux publics.
+                        Nous sommes à l'écoute des patients pour vous aider à résoudre vos préoccupations, car votre
+                        bien-être est notre priorité.
+                    </p>
+                </div>
+
+                <!-- Section "Notre but" -->
+                <div>
+                    <h4 class="font-bold text-2xl text-blue-700">Notre but</h4>
+                    <p class="mt-4 text-gray-700">
+                        Notre plateforme collabore avec les hôpitaux pour améliorer la gestion des requêtes des
+                        patients.
+                        Grâce à des outils digitaux avancés, nous facilitons la communication avec les patients,
+                        assurant ainsi un traitement plus rapide et efficace de leurs demandes.
+                        Cette synergie optimise la prise en charge, réduit les délais d’attente et améliore l’expérience
+                        des patients grâce à un suivi personnalisé et une meilleure coordination des soins.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10 text-center text-blue-700 font-bold text-lg">
+                <strong>Rejoignez-nous dès aujourd’hui et faites entendre votre voix !</strong>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-[#0F2C3F] text-white py-10 relative">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center opacity-30" 
+        style="background-image: url('/images/voixsante/im3-1.jpg')"></div>
+        <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8">
+        <!-- Logo et description -->
+        <div>
+            <h2 class="text-2xl font-bold">VOIX SANTÉ</h2>
+            <p class="mt-3 text-gray-300">
+            Plateforme de témoignages et d'amélioration du système de santé à Abidjan.
+            </p>
+        </div>
+    
+        <!-- Contact -->
+        <div>
+            <h3 class="text-lg font-semibold">CONTACT</h3>
+            <ul class="mt-3 space-y-2 text-gray-300">
+            <li>📍 Abidjan, Côte d'Ivoire</li>
+            <li>📧 contact@voixsante.ci</li>
+            <li>📞 +225 05 55 73 77 62</li>
+            </ul>
+        </div>
+    
+        <!-- Liens rapides -->
+        <div>
+            <h3 class="text-lg font-semibold">LIENS UTILES</h3>
+            <ul class="mt-3 space-y-2 text-gray-300">
+            <li><a href="http://127.0.0.1:5502/1Accueil.html" class="hover:text-gray-400">Accueil</a></li>
+            <li><a href="http://127.0.0.1:5502/2apropos.html" class="hover:text-gray-400">À propos</a></li>
+            <li><a href="http://127.0.0.1:5502/3contact.html" class="hover:text-gray-400">Contact</a></li>
+            <li><a href="http://127.0.0.1:5502/4compteuser.html" class="hover:text-gray-400">Compte Utilisateur</a></li>
+            <li><a href="http://127.0.0.1:5502/500comptehopital.html" class="hover:text-gray-400">Compte Hôpital</a></li>
+            <li><a href="http://127.0.0.1:5502/600faq.html" class="hover:text-gray-400">FAQ</a></li>
+            <li><a href="http://127.0.0.1:5502/700connexion.html" class="hover:text-gray-400">Connexion</a></li>
+            </ul>
+        </div>
+    
+        <!-- Newsletter -->
+        <div>
+            <h3 class="text-lg font-semibold">NEWSLETTER</h3>
+            <form class="mt-3 flex">
+            <input type="email" placeholder="Votre email" class="p-2 rounded-l bg-white text-black outline-none flex-1">
+            <button class="bg-green-500 px-4 py-2 rounded-r hover:bg-green-600">📩</button>
+            </form>
+            <!-- Réseaux sociaux -->
+            <div class="mt-4 flex space-x-3">
+            <a href="#" class="text-gray-300 hover:text-white">🌍</a>
+            <a href="#" class="text-gray-300 hover:text-white">📘</a>
+            <a href="#" class="text-gray-300 hover:text-white">🐦</a>
+            <a href="#" class="text-gray-300 hover:text-white">📸</a>
+            </div>
+        </div>
+        </div>
+<br><br>
+        <div class="text-center text-white text-sm mt-6 pb-1 pt-2"
+        >
+        <div class="container mx-auto px-4 text-center">
+          <p>© 2025 VOIXsante. Tous droits réservés.</p>
+          <p class="mt-2 text-sm">Recueillir et analyser les retours de 1000 patients pour améliorer le service hospitalier à Abidjan</p>
+        </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgCarousels = document.querySelectorAll('.bg-carousel');
+            let currentIndex = 0;
+
+            function showNextBackground() {
+                bgCarousels.forEach(bg => bg.classList.remove('active'));
+                bgCarousels[currentIndex].classList.add('active');
+                currentIndex = (currentIndex + 1) % bgCarousels.length;
+            }
+            setInterval(showNextBackground, 2000);
+        });
+    </script>
+</body>
+
+</html>

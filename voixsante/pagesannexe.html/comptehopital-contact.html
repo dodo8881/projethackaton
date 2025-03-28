@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="dist/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <!--navbar-->
+        <div class="bg-cyan-50 text-black text-center text-xs py-1">
+            Témoignez aujourd'hui, soignez demain !
+        </div>
+        <nav id="navbar" class="flex items-center justify-between bg-blue-100 p-4 px-6">
+            <div class="flex items-center relative group">
+                <a href="#" class="flex items-center mr-4">
+                    <img src="/voixsantemodif/voixsante/images/logoVoixsante.jpg" alt="VOIXsante Logo" class="h-12 w-12 rounded-full mr-2">
+                    <p class="font-mono font-extrabold rounded-full">VOIX</p>
+                    <p class="font-mono">sante</p>
+                </a>
+                
+                <!-- Menu à côté du logo -->
+                <div id="nav-toggle" class="flex gap-1 p-2 px-2 border border-none rounded-lg cursor-pointer select-none text-black">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                                ></path>
+                    </svg>
+                    Menu
+                </div>
+                
+                <!-- Menu déroulant au survol -->
+                <div id="group" class="absolute left-0 top-full hidden group-hover:flex bg-blue-200 p-4 flex-col gap-5 text-l font-semibold z-10 w-54">
+                    <ul class="flex flex-col gap-2 justify-center">
+                        <li class="p-2 text-center"><a href="#" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Accueil</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/2apropos.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">A propos</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Contact</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Temoignage</a></li>
+                        <li class="p-2 text-center"><a href="#" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">FAQ</a></li>
+                        
+                    </ul>
+                    
+                    <button class="p-2 text-center">
+                        <a href="http://127.0.0.1:5502/700connexion.html" class="bg-blue-200 transition-colors delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white font-bold py-2 px-4 rounded">Connexion</a>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Divs en dehors du menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-user text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="http://127.0.0.1:5502/4compteuser.html" class="hover:underline">Bonjour, User</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-question text-cyan-500 text-md rounded-full border-1 py-1 px-2"></i>
+                    <a href="#" class="hover:underline">Aide</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-envelope text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="#" class="hover:underline">Message</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="flex justify-center space-x-20 mt-20 ml-20">
+
+            <div>
+                <div class="bg-white w-80 h-full p-6 rounded-lg shadow-lg m-10">
+                    <ul class="space-y-3">
+                        <li class="flex items-center cursor-pointer hover:text-blue-500 p-6">
+                            <a href="comptehôpital.html">
+                            <button type="submit"><i class="fa-solid fa-user"></i>Votre compte VoixSanté</button>
+                            </a>
+                        </li>
+                        <li class="flex items-center cursor-pointer hover:text-blue-500 p-6">
+                            <a href="avisdesutilisateurs.html">
+                                <button type="submit"><i class="fa-solid fa-comment"></i>Avis des utilisateurs</button>
+                            </a>
+                        </li>
+                        <li class="flex items-center cursor-pointer hover:text-blue-500 p-6">
+                            <a href="reception.html">
+                            <button type="submit"><i class="fa-solid fa-envelope"></i>Boîte de réception</button>
+                            </a>
+                        </li>
+                        <li class="pt-2 mt-2 flex items-center cursor-pointer hover:text-blue-500 p-6">
+                            <a href="contact.html">
+                                <button type="submit"><i class="fa-solid fa-headphones"></i>Contacter VoixSanté</button>
+            
+                            </a>
+                        </li>
+                        <li class="flex items-center cursor-pointer  hover:text-blue-500 p-6">
+                            <a href="gestion.html">
+                             <button type="submit">Gérez votre compte</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-center cursor-pointer hover:text-blue-600 font-semibold">
+                        Déconnexion
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-4xl h-full mx-auto mt-10 p-10 bg-white  rounded-lg">
+            
+                <!--bloc2-->
+                <div class="flex justify-center mb-10">
+                    <h1 class="text-xl font-semibold">Contacts</h1>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<br><br><br><br>
+    
+</body>
+</html>

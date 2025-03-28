@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boîte de réception</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <!--navbar-->
+        <div class="bg-cyan-50 text-black text-center text-xs py-1">
+            Témoignez aujourd'hui, soignez demain !
+        </div>
+        <nav id="navbar" class="flex items-center justify-between bg-blue-100 p-4 px-6">
+            <div class="flex items-center relative group">
+                <a href="#" class="flex items-center mr-4">
+                    <img src="/voixsantemodif/voixsante/images/logoVoixsante.jpg" alt="VOIXsante Logo" class="h-12 w-12 rounded-full mr-2">
+                    <p class="font-mono font-extrabold rounded-full">VOIX</p>
+                    <p class="font-mono">sante</p>
+                </a>
+                
+                <!-- Menu à côté du logo -->
+                <div id="nav-toggle" class="flex gap-1 p-2 px-2 border border-none rounded-lg cursor-pointer select-none text-black">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                                ></path>
+                    </svg>
+                    Menu
+                </div>
+                
+                <!-- Menu déroulant au survol -->
+                <div id="group" class="absolute left-0 top-full hidden group-hover:flex bg-blue-200 p-4 flex-col gap-5 text-l font-semibold z-10 w-54">
+                    <ul class="flex flex-col gap-2 justify-center">
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/1Accueil.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Accueil</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/2apropos.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">A propos</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Contact</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/600faq.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Temoignage</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/600faq.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">FAQ</a></li>
+                        
+                    </ul>
+                    
+                    <button class="p-2 text-center">
+                        <a href="http://127.0.0.1:5502/700connexion.html" class="bg-blue-200 transition-colors delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white font-bold py-2 px-4 rounded">Connexion</a>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Divs en dehors du menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-user text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="http://127.0.0.1:5502/4compteuser.html" class="hover:underline">Bonjour, User</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-question text-cyan-500 text-md rounded-full border-1 py-1 px-2"></i>
+                    <a href="#" class="hover:underline">Aide</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-envelope text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="#" class="hover:underline">Message</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main><!--2 blocs-->
+        
+        <div class="flex  space-x-10 mt-10"><!--Ils prend tout-->
+            
+            <div class="w-80 shadow-xl ml-30 pl-5 pt-5 pb-5 space-x-2 gap-5 rounded-3xl"><!--Bloc1-->
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-door-open text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/4compteuser.html" class="">Bienvenue</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-user text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/41votrecompte.html" class="">Votre compte VOIXsante</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-user-plus text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/42v%C3%A9cus.html" class="">Vos Vécus</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-bullhorn text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/43suggestions.htm" class="">Vos suggestions</a>
+                </div><br>
+                <div class="flex space-x-2 items-center bg-cyan-200 px-2 py-2 rounded-xl">
+                    <i class="fa-solid fa-inbox text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/44boite.html" class="">Boîte de réception</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-share text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/45suivisret.html" class="">Suivis/ Retour</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-magnifying-glass text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/46recherche.html" class="">Rechercher</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-microphone text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/47vocale.html" class="">Saisie Vocale</a>
+                </div>
+
+                <br>
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-plus text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/48nouveaux.html" class="">Ajouter Nouveaux</a>
+                </div>
+
+                <br><br>
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-user-plus text-cyan-500 text-md"></i>
+                    <a href="#" class="">Inviter des personnes</a>
+                </div>
+
+                <br><br><br><br>
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-minus text-cyan-500 text-md"></i>
+                    <a href="#" class="">Déconnexion</a>
+                </div>
+            </div>
+
+            <div class="w-220 h-cover shadow-xl p-10 rounded-3xl"><!--Bloc2-->
+
+                <div>
+                    <h1 class="font-Anton font-semibold text-3xl hover:animate-bounce">Boîte de Réception</h1>
+                    <hr>
+
+                    <br><br>
+
+                    <div class="grid grid-cols-1 gap-20"><!--grille de 2 colonnes et lignes-->
+
+                        <div class="flex bg-cyan-50 p-2 rounded-2xl space-x-20 animate-slideUp transition-transform duration-500 hover:scale-105 shadow-2xl">
+
+                            <div>
+                                <h2 class="text-xl font-semibold mb-4 hover:animate-bounce">Messages reçus</h2>
+                                <div class="flex items-center justify-center py-10 bg-gray-50 rounded">
+                                <p class="p-5 pr-50">Vous n'avez aucun nouveau message.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md p-6 mb-6 mt-5">
+                                <h2 class="text-xl font-semibold text-gray-700 mb-4">Filtres</h2>
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <input type="radio" name="filter" id="all" checked class="h-4 w-4 text-blue-600">
+                                        <label for="all" class="ml-2 text-gray-700">Tous les messages</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="radio" name="filter" id="unread" class="h-4 w-4 text-blue-600">
+                                        <label for="unread" class="ml-2 text-gray-700">Non lus</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="radio" name="filter" id="read" class="h-4 w-4 text-blue-600">
+                                        <label for="read" class="ml-2 text-gray-700">Lus</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-2xl p-6 animate-slideUp transition-transform duration-500 hover:scale-105">
+                            <h2 class="text-xl font-semibold text-gray-700 mb-4">Paramètres de notification</h2>
+                            <p class="text-gray-600 mb-4">Gérez comment vous souhaitez être notifié lors de la réception de nouveaux messages.</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <label for="email-notif" class="text-gray-700">Notifications par e-mail</label>
+                                    <div class="relative inline-block w-12 mr-2 align-middle select-none">
+                                        <input type="checkbox" id="email-notif" checked class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                        <label for="email-notif" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                                    </div>
+                                    <span class="text-green-500 font-medium">Activées</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <label for="push-notif" class="text-gray-700">Notifications push        </label>
+                                    <div class="relative inline-block w-12 mr-2 align-middle select-none">
+                                        <input type="checkbox" id="push-notif" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                        <label for="push-notif" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                                    </div>
+                                    <span class="text-red-500 font-medium">Désactivées</span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <br><br><br>
+
+    <style>
+        /* Custom Toggle Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #3B82F6;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #3B82F6;
+        }
+    </style>
+
+    <script>
+        // Toggle switch functionality
+        document.getElementById('email-notif').addEventListener('change', function() {
+            const statusText = this.parentElement.nextElementSibling;
+            if (this.checked) {
+                statusText.textContent = 'Activées';
+                statusText.classList.remove('text-red-500');
+                statusText.classList.add('text-green-500');
+            } else {
+                statusText.textContent = 'Désactivées';
+                statusText.classList.remove('text-green-500');
+                statusText.classList.add('text-red-500');
+            }
+        });
+
+        document.getElementById('push-notif').addEventListener('change', function() {
+            const statusText = this.parentElement.nextElementSibling;
+            if (this.checked) {
+                statusText.textContent = 'Activées';
+                statusText.classList.remove('text-red-500');
+                statusText.classList.add('text-green-500');
+            } else {
+                statusText.textContent = 'Désactivées';
+                statusText.classList.remove('text-green-500');
+                statusText.classList.add('text-red-500');
+            }
+        });
+    </script>
+</body>
+</html>

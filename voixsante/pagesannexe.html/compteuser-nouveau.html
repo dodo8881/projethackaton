@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveaux</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <!--navbar-->
+        <div class="bg-cyan-50 text-black text-center text-xs py-1">
+            Témoignez aujourd'hui, soignez demain !
+        </div>
+        <nav id="navbar" class="flex items-center justify-between bg-blue-100 p-4 px-6">
+            <div class="flex items-center relative group">
+                <a href="#" class="flex items-center mr-4">
+                    <img src="/voixsantemodif/voixsante/images/logoVoixsante.jpg" alt="VOIXsante Logo" class="h-12 w-12 rounded-full mr-2">
+                    <p class="font-mono font-extrabold rounded-full">VOIX</p>
+                    <p class="font-mono">sante</p>
+                </a>
+                
+                <!-- Menu à côté du logo -->
+                <div id="nav-toggle" class="flex gap-1 p-2 px-2 border border-none rounded-lg cursor-pointer select-none text-black">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                                ></path>
+                    </svg>
+                    Menu
+                </div>
+                
+                <!-- Menu déroulant au survol -->
+                <div id="group" class="absolute left-0 top-full hidden group-hover:flex bg-blue-200 p-4 flex-col gap-5 text-l font-semibold z-10 w-54">
+                    <ul class="flex flex-col gap-2 justify-center">
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/1Accueil.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Accueil</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/2apropos.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">A propos</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Contact</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/3contact.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">Temoignage</a></li>
+                        <li class="p-2 text-center"><a href="http://127.0.0.1:5502/600faq.html" class="delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white py-2 px-4 rounded">FAQ</a></li>
+                        
+                    </ul>
+                    
+                    <button class="p-2 text-center">
+                        <a href="http://127.0.0.1:5502/700connexion.html" class="bg-blue-200 transition-colors delay-50 duration-300 hover:bg-blue-600 text-cyan-900 hover:text-white font-bold py-2 px-4 rounded">Connexion</a>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Divs en dehors du menu -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-user text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="http://127.0.0.1:5502/4compteuser.html" class="hover:underline">Bonjour, User</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-question text-cyan-500 text-md rounded-full border-1 py-1 px-2"></i>
+                    <a href="#" class="hover:underline">Aide</a>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
+                    <i class="fa-solid fa-envelope text-cyan-500 text-md rounded-full border-1 p-1"></i>
+                    <a href="#" class="hover:underline">Message</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main><!--2 blocs-->
+        
+        <div class="flex  space-x-10 mt-10"><!--Ils prend tout-->
+            <div class="w-80 shadow-xl ml-30 pl-5 pt-5 pb-5 space-x-2 gap-5 rounded-3xl"><!--Bloc1-->
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-door-open text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/4compteuser.html" class="">Bienvenue</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-user text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/41votrecompte.html" class="">Votre compte VOIXsante</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-user-plus text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/42v%C3%A9cus.html" class="">Vos Vécus</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-bullhorn text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/43suggestions.htm" class="">Vos suggestions</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-inbox text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/44boite.html" class="">Boîte de réception</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-share text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/45suivisret.html" class="">Suivis/ Retour</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-magnifying-glass text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/46recherche.html" class="">Rechercher</a>
+                </div><br>
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-microphone text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/47vocale.html" class="">Saisie Vocale</a>
+                </div>
+
+                <br>
+
+                <div class="flex space-x-2 items-center bg-cyan-200 px-2 py-2 rounded-xl">
+                    <i class="fa-solid fa-plus text-cyan-500 text-md"></i>
+                    <a href="http://127.0.0.1:5502/48nouveaux.html" class="">Ajouter Nouveaux</a>
+                </div>
+
+                <br><br>
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-user-plus text-cyan-500 text-md"></i>
+                    <a href="#" class="">Inviter des personnes</a>
+                </div>
+
+                <br><br><br><br>
+
+                <div class="flex space-x-2 items-center hover:bg-cyan-200 hover:px-2 hover:py-2 hover:rounded-xl">
+                    <i class="fa-solid fa-minus text-cyan-500 text-md"></i>
+                    <a href="#" class="">Déconnexion</a>
+                </div>
+            </div>
+
+            <div class="w-220 h-cover p-2 rounded-2xl"><!--Bloc2-->
+
+                <div class="mt-1 mb-2 max-w-xl mx-auto shadow-2xl animate-slideUp transition-transform duration-500 hover:scale-105">
+                    <h2 class="text-2xl font-bold text-teal-700 mb-6 text-center">Ajouter nouveau message</h2>
+                    <form class="bg-grey-50 shadow-xl rounded-lg p-4">
+                        <div class="flex flex-wrap -mx-3 mb-4">
+                            
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
+                                Sujet
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" type="text" placeholder="Sujet de votre message"><br><br>
+        
+                            <label for="numero_passage" class="block text-gray-700 text-sm font-bold mb-2" >
+                                Numéro de passage</label>
+                            <input type="text" name="numero_passage" id="numero_passage"
+                                            placeholder="🔢 Votre Numéro de passage" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                            required> <br><br>
+        
+                            <label for="ticket_caisse" class="block text-gray-700 text-sm font-bold mb-2">
+                                Ticket de caisse</label>
+                            <input type="text" name="ticket_caisse" id="ticket_caisse"
+                                                placeholder="🧾 Votre Ticket de caisse" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                required><br><br>
+        
+                            <label for="hopital" class="block text-gray-700 text-sm font-bold mb-2">
+                                Hôpital</label>
+                            <select name="hopital" id="hopital" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                    required>
+                                                    <option value="Polyclinique Internationale Sainte Anne Marie (PISAM)">🏥
+                                                        Polyclinique Internationale Sainte Anne Marie (PISAM)</option>
+                                                    <option value="Polyclinique Farah">🏥 Polyclinique Farah</option>
+                                                    <option value="CENTRE HOSPITALIER ET UNIVERSITAIRE D'ANGRE">🏥 CENTRE HOSPITALIER ET
+                                                        UNIVERSITAIRE D'ANGRE</option>
+                                                    <option value="POLYCLINIQUE AVICENNES">🏥 POLYCLINIQUE AVICENNES</option>
+                                                    <option value="CLINIQUE MEDICALE DANGA">🏥 CLINIQUE MEDICALE DANGA</option>
+                                                    <option value="CLINIQUE DON ORIONE- BONOUA">🏥 CLINIQUE DON ORIONE- BONOUA</option>
+                                                    <option value="POLYCLINIQUE GROUPE MEDICAL DU PLATEAU (GMP)">🏥 POLYCLINIQUE GROUPE
+                                                        MEDICAL DU PLATEAU (GMP)</option>
+                                                    <option value="POLYCLINIQUE HOTEL DIEU ABIDJAN">🏥 POLYCLINIQUE HOTEL DIEU ABIDJAN
+                                                    </option>
+                                                    <option value="CENTRE HOSPITALIER UNIVERSITAIRE DE TREICHVILLE, ABIDJAN">🏥 CENTRE
+                                                        HOSPITALIER UNIVERSITAIRE DE TREICHVILLE, ABIDJAN</option>
+                                                    <option value="CENTRE HOSPITALIER UNIVERSITAIRE DE YOPOUGON, ABIDJAN">🏥 CENTRE
+                                                        HOSPITALIER UNIVERSITAIRE DE YOPOUGON, ABIDJAN</option>
+                                                    <option value="CENTRE HOSPITALIER UNIVERSITAIRE DE COCODY, ABIDJAN">🏥 CENTRE
+                                                        HOSPITALIER UNIVERSITAIRE DE COCODY, ABIDJAN</option>
+                                                    <option value="CLINIQUE MEDICALE LE GRAND CENTRE">🏥 CLINIQUE MEDICALE LE GRAND
+                                                        CENTRE</option>
+                                                    <option value="Polyclinique Sacré-Coeur d'Abidjan">🏥 Polyclinique Sacré-Coeur
+                                                        d'Abidjan</option>
+                                                    <option value="Novacare : Centre de consultations et diagnostic">🏥 Novacare :
+                                                        Centre de consultations et diagnostic</option>
+                                                    <option value="Clinique La Providence">🏥 Clinique La Providence</option>
+                                                    <option value="Hôpital Militaire d'Abidjan (HMA)">🏥 Hôpital Militaire d'Abidjan
+                                                        (HMA)</option>
+                                                    <option value="Hôpital Mère-Enfant de Bingerville">🏥 Hôpital Mère-Enfant de
+                                                        Bingerville</option>
+                                                    <option value="Hôpital Général de Port-Bouët">🏥 Hôpital Général de Port-Bouët
+                                                    </option>
+                                                    <option value="Hôpital Général de Yopougon">🏥 Hôpital Général de Yopougon</option>
+                                                    <option value="Hôpital Général de Marcory">🏥 Hôpital Général de Marcory</option>
+                                                    <option value="Hôpital Général de Koumassi">🏥 Hôpital Général de Koumassi</option>
+                                                    <option value="Hôpital Général de Grand-Bassam">🏥 Hôpital Général de Grand-Bassam
+                                                    </option>
+                                                    <option value="ICA (INSTITUT DE CARDIOLOGIE D'ABIDJAN)">🏥 ICA (INSTITUT DE
+                                                        CARDIOLOGIE D'ABIDJAN)</option>
+                                                    <option value="Hôpital Général de Bingerville">🏥 Hôpital Général de Bingerville
+                                                    </option>
+                                                    <option value="L'Institut National de Santé Publique de Côte d'Ivoire INSP">🏥
+                                                        L'Institut National de Santé Publique de Côte d'Ivoire INSP</option>
+                                                    <option value="CONSEIL NATIONAL DE L'ORDRE DES MEDECINS">🏥 CONSEIL NATIONAL DE
+                                                        L'ORDRE DES MEDECINS</option>
+                                                </select>
+        
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                                Témoignage/ Avis
+                            </label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32" id="message" placeholder="Votre Témoignage/ Avis précisez!"></textarea>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline" type="button">
+                                Envoyer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <br><br><br>
+
+</body>
+</html>
