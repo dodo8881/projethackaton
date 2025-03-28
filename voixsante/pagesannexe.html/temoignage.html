@@ -44,7 +44,7 @@
 <body class="">
     <header class="relative w-full animate-fadeIn">
         <div class="relative"></div>
-            <img src="/voixsantemodif/voixsante/images/paysage-analogique-ville-batiments_23-2149661462.avif" alt="Background" class="w-full h-40 lg:h-80 object-cover rounded-bl-[20%] rounded-br-[60%]">
+            <img src="/projethackaton/voixsante/images/paysage-analogique-ville-batiments_23-2149661462.avif" alt="Background" class="w-full h-40 lg:h-80 object-cover rounded-bl-[20%] rounded-br-[60%]">
             <div class="absolute inset-0 bg-white bg-opacity-20">
                 <div class="absolute inset-0 flex items-center justify-center animate-slideUp">
                     <input type="text" placeholder="Chercher un témoignage/ avis" class="px-4 py-2 w-1/2 rounded-l-xl border border-gray-300 focus:outline-none">
@@ -52,53 +52,62 @@
                 </div>
             </div>
         </div>
-        <ul class="hidden lg:flex space-x-10 text-white">
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/index.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Accueil</a></li>
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/apropos.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">A propos</a></li>
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/contact.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Contacts</a></li>
-            <ul class="flex space-x-4">
-                <li class="relative group">
-                    <a href="#" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">
-                        Comptes
-                    </a>
-                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-lg rounded mt-2 w-48 z-10">
-                        <li>
-                            <a href="/projethackaton/voixsante/pagesannexe.html/compteuser.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
-                                Compte d'utilisateur
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/projethackaton/voixsante/pagesannexe.html/comptehopital.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
-                                Compte des hôpitaux
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+        <nav class="fixed top-0 left-0 right-0 p-4 shadow-lg shadow-black z-10 flex justify-between w-full animate-slideUp transition-colors duration-300 navbar" id="navbar">
+            <!-- Logo -->
+            <a href="/projethackaton/voixsante/index.html" class="flex items-center">
+                <img src="/projethackaton/voixsante/images/logoVoixsante.jpg" alt="VOIXsanté Logo" class="h-10 w-10 rounded-full mr-2">
+                <span class="text-2xl font-bold text-white">VOIXsante</span>
+            </a>
+            
+            <!-- Navigation -->
+            <ul class="hidden lg:flex space-x-10 text-white">
+                <li><a href="/projethackaton/voixsante/index.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Accueil</a></li>
+                <li><a href="/projethackaton/voixsante/pagesannexe.html/apropos.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">A propos</a></li>
+                <li><a href="/projethackaton/voixsante/pagesannexe.html/contact.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Contacts</a></li>
+                <ul class="flex space-x-4">
+                    <li class="relative group">
+                        <a href="#" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">
+                            Comptes
+                        </a>
+                        <ul class="absolute hidden group-hover:block bg-white text-black shadow-lg rounded mt-2 w-48 z-10">
+                            <li>
+                                <a href="/projethackaton/voixsante/pagesannexe.html/compteuser.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
+                                    Compte d'utilisateur
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/projethackaton/voixsante/pagesannexe.html/comptehopital.html" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">
+                                    Compte des hôpitaux
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <li><a href="/projethackaton/voixsante/pagesannexe.html/temoignage.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Temoignage</a></li>
+                <li><a href="/projethackaton/voixsante/pagesannexe.html/faq.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">FAQ</a></li>
+                <li><a href="/projethackaton/voixsante/pagesannexe.html/tableaudebdadmin.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Admin</a></li>
+                <li><a href="/projethackaton/voixsante/pagesannexe.html/connexion.html" class="hover:bg-blue-300 p-2 rounded border">Connexion</a></li>
             </ul>
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/temoignage.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Temoignage</a></li>
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/faq.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">FAQ</a></li>
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/tableaudebdadmin.html" class="relative p-2 rounded hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:right-0 hover:after:bottom-0 hover:after:h-1 hover:after:bg-blue-500 hover:after:rounded-full">Admin</a></li>
-            <li><a href="/projethackaton/voixsante/pagesannexe.html/connexion.html" class="hover:bg-blue-300 p-2 rounded border">Connexion</a></li>
-        </ul>
+        </nav>
     </header>
     
     <main class="ml-10">
         
         <section class="absolute top-50 left-20 mt-8 mx-auto w-3/4 grid grid-cols-4 gap-4 text-center animate-fadeIn">
             <div class="bg-gray-50 p-4 rounded-lg shadow-md animate-slideUp">
-                <p class="text-3xl font-bold text-blue-500">04</p>
+                <p class="text-3xl font-bold text-blue-500">05</p>
                 <p class="text-gray-600">Nouveaux Utilisateurs</p>
             </div>
             <div class="bg-gray-50 p-4 rounded-lg shadow-md animate-slideUp" style="animation-delay: 0.2s;">
-                <p class="text-3xl font-bold text-blue-500">100</p>
+                <p class="text-3xl font-bold text-blue-500">05</p>
                 <p class="text-gray-600">Témoignages</p>
             </div>
             <div class="bg-gray-50 p-4 rounded-lg shadow-md animate-slideUp" style="animation-delay: 0.4s;">
-                <p class="text-3xl font-bold text-blue-500">08</p>
+                <p class="text-3xl font-bold text-blue-500">03</p>
                 <p class="text-gray-600">Avis</p>
             </div>
             <div class="bg-gray-50 p-4 rounded-lg shadow-md animate-slideUp" style="animation-delay: 0.6s;">
-                <p class="text-3xl font-bold text-blue-500">56</p>
+                <p class="text-3xl font-bold text-blue-500">05</p>
                 <p class="text-gray-600">Utilisateurs</p>
             </div>
         </section>
@@ -106,71 +115,71 @@
 
         <br><br><br><br><br> <br><br>
         <!-- Right Column: Login and Recent Replies -->
-        <aside class="space-y-6 fixed top-70 bottom-5 right-20 w-1/5 opacity-95 bg-indigo-300 p-5 rounded-2xl">
+        <aside class="space-y-6 fixed top-70 bottom-5 right-20 w-1/5 opacity-95 bg-indigo-300 p-5 shadow-2xl rounded-2xl animate-slideIn">
             <div class="text-center mb-6">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-            <lucide-icon name="user-plus" class="mx-auto text-indigo-500 w-12 h-12 animate-float"></lucide-icon>
+            <lucide-icon name="user-plus" class="mx-auto text-indigo-500 w-12 h-12 animate-bounce"></lucide-icon>
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Créez votre Compte</h3>
             <p class="text-sm text-gray-600 mb-4">Rejoignez notre communauté et partagez vos expériences</p>
             <style>
-                input::placeholder {
-                    transition: color 0.3s ease, border 0.3s ease;
-                }
-                input:hover::placeholder {
-                    color: #4F46E5; /* Indigo-600 */
-                }
-                input:hover {
-                    border-color: #4F46E5; /* Indigo-600 */
-                    border-width: 2px; /* Increased border size */
-                }
-                input::placeholder {
-                    display: inline-block; /* Ensures elements are on the same line */
-                }
+            input::placeholder {
+                transition: color 0.3s ease, border 0.3s ease;
+            }
+            input:hover::placeholder {
+                color: #4F46E5; /* Indigo-600 */
+            }
+            input:hover {
+                border-color: #4F46E5; /* Indigo-600 */
+                border-width: 2px; /* Increased border size */
+            }
+            input::placeholder {
+                display: inline-block; /* Ensures elements are on the same line */
+            }
             </style>
             </div>
             <style>
-                aside {
-                    animation: slideIn 1s ease-in-out;
-                }
+            aside {
+                animation: slideIn 1s ease-in-out;
+            }
 
-                @keyframes slideIn {
-                    from {
-                        transform: translateX(100%);
-                        opacity: 0;
-                    }
-                    to {
-                        transform: translateX(0);
-                        opacity: 1;
-                    }
+            @keyframes slideIn {
+                from {
+                transform: translateX(100%);
+                opacity: 0;
                 }
+                to {
+                transform: translateX(0);
+                opacity: 1;
+                }
+            }
             </style>
             <form class="space-y-4">
-                <div class="relative">
-                    <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
-                    <input type="text" placeholder=" Nom d'utilisateur" class="w-full p-3 pl-10 border rounded-md focus:ring-2 
-                    focus:ring-indigo-200 transition-all hover">
-                </div>
-                <div class="relative">
-                    <input type="password" placeholder="Mot de passe" class="w-full p-3 pl-10 border rounded-md focus:ring-2 focus:ring-indigo-200 transition-all">
-                    <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
-                </div>
-                <div class="relative">
-                    <input type="email" placeholder=" Email" class="w-full p-3 pl-10 border rounded-md focus:ring-2 focus:ring-indigo-200 transition-all">
-                    <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
-                </div>
-                <button class="w-full bg-indigo-600 text-white py-3 rounded-full hover:bg-indigo-900 transition-colors group">
-                    <span class="flex items-center justify-center">
-                        Inscrivez-vous
-                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                </button>
+            <div class="relative">
+                <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
+                <input type="text" placeholder=" Nom d'utilisateur" class="w-full p-3 pl-10 border rounded-md focus:ring-2 
+                focus:ring-indigo-200 transition-all hover">
+            </div>
+            <div class="relative">
+                <input type="password" placeholder="Mot de passe" class="w-full p-3 pl-10 border rounded-md focus:ring-2 focus:ring-indigo-200 transition-all">
+                <i class="fas fa-lock absolute left-3 top-3 text-gray-400"></i>
+            </div>
+            <div class="relative">
+                <input type="email" placeholder=" Email" class="w-full p-3 pl-10 border rounded-md focus:ring-2 focus:ring-indigo-200 transition-all">
+                <i class="fas fa-envelope absolute left-3 top-3 text-gray-400"></i>
+            </div>
+            <button class="w-full bg-indigo-600 text-white py-3 rounded-full hover:bg-indigo-900 transition-colors group">
+                <span class="flex items-center justify-center">
+                Inscrivez-vous
+                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </span>
+            </button>
             </form>
             <div class="mt-4 text-center">
-                <p class="text-sm text-gray-600">
-                    Déjà un compte ? 
-                    <a href="#" class="text-indigo-600 hover:underline">Connectez-vous</a>
-                </p>
+            <p class="text-sm text-gray-600">
+                Déjà un compte ? 
+                <a href="/projethackaton/voixsante/pagesannexe.html/connexion.html" class="text-indigo-600 hover:underline">Connectez-vous</a>
+            </p>
             </div>
             </div>
         </aside>
@@ -203,7 +212,7 @@
             <tbody class="space-y-5 divide-y divide-gray-200">
             <tr class="transition-transform transform hover:scale-105 rounded shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/femme-africaine-entrepreneur-prospere-portant-lunettes-face-portrait_53876-148050.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/femme-africaine-entrepreneur-prospere-portant-lunettes-face-portrait_53876-148050.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Temps d'attentes très long, on a du avoir recours à un proche du corp médical pour consulter un medecin.
@@ -229,7 +238,7 @@
 
             <tr class="transition-transform transform bg-blue-50 hover:scale-105 rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/beau-male-adulte-posant_23-2148729713.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/beau-male-adulte-posant_23-2148729713.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Mauvaise prise en charge, ils ne pensent que à eux.
@@ -255,7 +264,7 @@
 
             <tr class="transition-transform transform hover:scale-105 bg-white rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/homme-afro-americain-porter-lunettes-rondes_273609-10062.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/homme-afro-americain-porter-lunettes-rondes_273609-10062.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Personnel incompétent ! A l'hôpital de port bouet ma tante a perdu la vie par leur faute. C'est lamentable !
@@ -281,7 +290,7 @@
 
             <tr class="transition-transform transform hover:scale-105 bg-blue-50 rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/portrait-adolescente-africaine-visage-souriant-heureux_53876-146757.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/portrait-adolescente-africaine-visage-souriant-heureux_53876-146757.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Attente des résultats médicaux très longues!
@@ -306,7 +315,7 @@
             </tr>
             <tr class="transition-transform transform hover:scale-105 bg-white rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/grand-plan-portrait-jeune-homme-africain-chaume_171337-1296.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/grand-plan-portrait-jeune-homme-africain-chaume_171337-1296.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Temps d'attentes interminables, j'ai du changé de cliniques pour pouvoir être consulter par un medecin et cela malgré mon état de santé.
@@ -361,7 +370,7 @@
             <tbody class="space-y-5 divide-y divide-gray-200">
             <tr class="transition-transform transform hover:scale-105 bg-white rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/homme-noir-posant_23-2148171684.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/homme-noir-posant_23-2148171684.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Très satisfait des soins
@@ -386,7 +395,7 @@
             </tr>
             <tr class="transition-transform transform hover:scale-105 bg-blue-100 rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/portrait-homme-afro-americain_23-2149072179.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/portrait-homme-afro-americain_23-2149072179.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Prise en charge à revoir
@@ -411,7 +420,7 @@
             </tr>
             <tr class="transition-transform transform hover:scale-105 bg-white rounded-full shadow-md">
             <td class="px-4 py-2 text-center">
-            <img src="/voixsantemodif/voixsante/images/portrait-femme-affaires-confiant-visage-souriant_53876-137693.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
+            <img src="/projethackaton/voixsante/images/portrait-femme-affaires-confiant-visage-souriant_53876-137693.avif" alt="Profile" class="w-10 h-10 rounded-full mx-auto">
             </td>
             <td class="px-4 py-2 text-center">
             Site intéressant
